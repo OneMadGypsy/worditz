@@ -1,6 +1,5 @@
 # worditz
-Wordle in the console
-
+An example Wordle implementation for the console. 
 
 ```python3
 import os, sys, random, json
