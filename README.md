@@ -4,7 +4,7 @@ An example Wordle implementation for the console.
 ```python3
 import os, sys, random, json
 
-CLEAR      = ('clear', 'cls')[sys.platform.startswith('win')]
+CLEAR = ('clear', 'cls')[sys.platform.startswith('win')]
 
 # game config
 MINTURNS = 1
