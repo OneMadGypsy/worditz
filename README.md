@@ -14,8 +14,10 @@ MAXWORD  = 16
 
 # data storage
 DAT = os.path.join(os.getcwd(), 'dat')
-if not os.path.isdir(DAT):
-    os.path.mkdir(DAT)
+if not os.path.isdir(DAT): os.mkdir(DAT)
+
+DAT = os.path.join(DAT, 'worditz')
+if not os.path.isdir(DAT): os.mkdir(DAT)
 
 # stats
 playing = True
@@ -55,8 +57,9 @@ while playing:
     # create local wordlist
     else:
         import nltk 
-        nltk.download('words')
+        #nltk.download('words')
         
+        print('retrieving words')
         from nltk.corpus import words
         
         wordlist = [word.upper() for word in words.words() if len(word)==wordlength]
